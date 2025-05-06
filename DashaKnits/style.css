@@ -343,3 +343,156 @@ nav {
   .btn:hover {
     background-color: #856fd8;
   }
+  /* ===== Улучшалки (не ломают твой стиль) ===== */
+
+/* Плавный скролл по якорям */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Мягкие тени и ховеры */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Плавность для ссылок и кнопок */
+a, button {
+  transition: all 0.3s ease;
+}
+
+/* Мягкий фокус на инпутах */
+input:focus, textarea:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(150, 150, 150, 0.3);
+}
+
+/* Адаптивка базовая */
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .card {
+    margin-bottom: 1.5rem;
+  }
+}
+
+.product-detail {
+  width: 100%;
+  padding: 2rem 2rem;
+  border-radius: 20px;
+  background-color: #ccc;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.product-img img {
+  max-width: 400px;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product-info {
+  flex: 1;
+}
+
+.product-info h1 {
+  margin-top: 0;
+  font-size: 2rem;
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #d16ba5;
+  margin: 1rem 0;
+}
+
+.desc {
+  margin-bottom: 2rem;
+}
+
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+  .product-detail {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .product-img img {
+    width: 100%;
+  }
+}
+.back-link {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.back-link:hover {
+  color: #d16ba5;
+}
+.product-meta {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem 0;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.product-meta li {
+  margin-bottom: 0.5rem;
+}
+
+.product-meta strong {
+  color: #444;
+}
+.hero-center {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-wrapper {
+  position: relative;
+  width: 400px;
+  height: 400px;
+}
+
+.logo-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 2;
+  font-size: 38px;
+}
+
+/* Картинки вокруг */
+.decor {
+  position: absolute;
+  width: 100px;
+  z-index: 1;
+}
+
+.decor-1 { top: 0%; left: 30%; transform: translateX(-50%) scale(300%); }         /* сверху */
+.decor-2 { top: 50%; left: 0; transform: translateY(-50%)scale(300%); }         /* слева */
+.decor-3 { top: -20%; right: -40%; transform: translateX(-50%);transform: rotate(-30deg)scale(300%); }      /* снизу */
+.decor-4 { top: 50%; right: 0; transform: translateY(-50%)scale(300%); }        /* справа */

@@ -7,6 +7,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Pacifico&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <title>Dasha Knits</title>
   <link rel="stylesheet" href="style.css">
+
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
 </head>
 <body>
     <header>
@@ -20,19 +23,20 @@
         </div>
         </nav>
       </header>
-  <section class="hero">
-    <div class="overlay"></div>
-
-    <img src="pictures/crochet.png" class="decor top-left" alt="crochet hook">
-    <img src="pictures/hat.png"     class="decor top-right" alt="hat">
-
-    <h1 class="title">DashaKnits</h1>
-    <p class="tagline">Warmth crafted with love</p>
-    <a href="projects.html" class="btn">View Projects</a>
-
-
-        <img src="pictures/sweater.png" class="decor bottom-left"  alt="sweater">
-        <img src="pictures/scarf.png"   class="decor bottom-right" alt="scarf">
+  <section class="hero-center">
+    <div class="logo-wrapper">
+      <!-- картинки вокруг -->
+      <img src="pictures/crochet.png" class="decor decor-1">
+      <img src="pictures/hat.png" class="decor decor-2">
+      <img src="pictures/sweater.png" class="decor decor-3">
+      <img src="pictures/scarf.png" class="decor decor-4">
+  
+      <!-- логотип по центру -->
+      <div class="logo-content">
+        <h1>DashaKnits</h1>
+        <p>Warmth crafted with love</p>
+        <a href="projects.html" class="btn">View Projects</a>
+      </div>
     </div>
   </section>
   <footer>
@@ -44,5 +48,11 @@
        </div>
     </div> 
 </footer>
+<!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+
 </body>
 </html>
