@@ -6,28 +6,29 @@ document.addEventListener('DOMContentLoaded', () => {
   const closeModal = document.getElementById('closeModal');
   let currentProduct = null;
 
-  const productData = {
-    1: {
-      img: 'pictures/dog.png',
-      title: 'Шапочка с узором',
-      desc: 'Состав: 100% шерсть. Ручная стирка. Не сушить в машине.',
-    },
-    2: {
-      img: 'pictures/happy.png',
-      title: 'Зелёный кардиган',
-      desc: 'Состав: 80% меринос, 20% акрил. Стирка при 30°C.',
-    },
-    3: {
-      img: 'pictures/raccoon.png',
-      title: 'Уютные носочки',
-      desc: 'Состав: 60% шерсть, 40% хлопок. Подходят для чувствительной кожи.'
-    },
-    4: {
-      img: 'pictures/turtle.png',
-      title: 'Уютные носочки',
-      desc: 'Состав: 60% шерсть, 40% хлопок. Подходят для чувствительной кожи.'
-    },
-  };
+ const productData = {
+  1: {
+    img: 'pictures/dog.png',
+    title: 'Patterned Beanie',
+    desc: 'Material: 100% wool. Hand wash only. Do not tumble dry.',
+  },
+  2: {
+    img: 'pictures/happy.png',
+    title: 'Green Cardigan',
+    desc: 'Material: 80% merino, 20% acrylic. Wash at 30°C.',
+  },
+  3: {
+    img: 'pictures/raccoon.png',
+    title: 'Cozy Socks',
+    desc: 'Material: 60% wool, 40% cotton. Suitable for sensitive skin.',
+  },
+  4: {
+    img: 'pictures/turtle.png',
+    title: 'Knitted Sweater',
+    desc: 'Material: 60% wool, 40% cotton. Gentle on sensitive skin.',
+  },
+};
+
 
  
   document.querySelectorAll('.card').forEach(card => {
