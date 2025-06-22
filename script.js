@@ -8,22 +8,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
  const productData = {
   1: {
-    img: 'pictures/dog.png',
+    img: 'pictures/picture3.png',
     title: 'Patterned Beanie',
     desc: 'Material: 100% wool. Hand wash only. Do not tumble dry.',
   },
   2: {
-    img: 'pictures/happy.png',
+    img: 'pictures/picture5.png',
     title: 'Green Cardigan',
     desc: 'Material: 80% merino, 20% acrylic. Wash at 30°C.',
   },
   3: {
-    img: 'pictures/raccoon.png',
+    img: 'pictures/picture7.png',
     title: 'Cozy Socks',
     desc: 'Material: 60% wool, 40% cotton. Suitable for sensitive skin.',
   },
   4: {
-    img: 'pictures/turtle.png',
+    img: 'pictures/picture1.png',
     title: 'Knitted Sweater',
     desc: 'Material: 60% wool, 40% cotton. Gentle on sensitive skin.',
   },
