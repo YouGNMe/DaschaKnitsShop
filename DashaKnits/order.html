@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abput me | DashaKnits</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="pictures/letter-d.png" type="image/png">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Abril+Fatface&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="site-header">
+  <div class="container">
+    <h2>Оформление Заказа | DaschaKnits</h2>
+    <nav class="nav">
+      <a href="start.html">Home</a>
+      <a href="projects.html">Products</a>
+      <a href="about.html">About me</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="order-container fade-in">
+    <div id="thanksBanner" class="hidden">
+  ✅ Спасибо за заказ! Мы свяжемся с вами в ближайшее время.
+</div>
+
+  <h1>Оформление заказа</h1>
+  <p id="productName">Вы заказываете: ...</p>
+
+  <form action="https://formspree.io/f/mldbvqrk" method="POST" novalidate>
+    <input type="hidden" name="_redirect" value="projects.html" />
+    <label for="name">👤 Имя:</label>
+    <input type="text" id="name" name="name" required placeholder="Ваше имя" />
+
+    <label for="email">📧 Email:</label>
+    <input type="email" id="email" name="email" required placeholder="you@example.com" />
+
+    <label for="comment">📝 Комментарий:</label>
+    <textarea id="comment" name="comment" placeholder="Цвет, размер, пожелания..."></textarea>
+
+    <button type="submit">Отправить заказ</button>
+  </form>
+</main>
+
+  <script>
+    // Считываем параметр из URL
+    const params = new URLSearchParams(window.location.search);
+    const item = params.get('item');
+
+    // Вставляем в текст
+    if (item) {
+      document.getElementById('productName').textContent = `Вы заказываете: ${item}`;
+    }
+  </script>
+</body>
+</html>

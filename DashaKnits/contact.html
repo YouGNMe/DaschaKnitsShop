@@ -1,38 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>DashaKnits — Projects</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | DashaKnits</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="pictures/letter-d.png" type="image/png">
+
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Abril+Fatface&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
-        <span class="logo"> DashaKnits</span>
-        <div class="nav-links">
-          <a href="index.html">Home</a>
-          <a href="projects.html">Projects</a>
-          <a href="contact.html"> Contact</a>
-          <a href="about.html">About Me</a>
-        </div>
-        </nav>
-      </header>
-     <h1> If u have some questions</h1>
-      <form>
-        <input type="text" placeholder="Your Name">
-        <input type="email" placeholder="Your Email">
-        <textarea placeholder="Your Message"></textarea>
-        <button type="submit">Send</button>
-      </form>
-      <footer>
-        <div class="container"> 
-           <p>© 2025 Eugen Metzler. All right reserved. </p>
-           <div class="socials">
-    <a href="https://www.instagram.com/iamopezdal/?hl=de"> Insta </a>
-    <a href="https://www.linkedin.com/in/eugen-metzler-820780339/">LinkedIn</a>
-           </div>
-        </div> 
-    </footer>
+  <header class="site-header">
+  <div class="container">
+    <h2>Contact | DaschaKnits</h2>
+    <nav class="nav">
+      <a href="start.html">Home</a>
+      <a href="projects.html">Products</a>
+      <a href="about.html">About me</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+  <main class="contact-form-container">
+    <h1>Свяжитесь с нами</h1>
+    <form class="contact-form">
+      <label for="name">Имя:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Сообщение:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+
+      <button type="submit">Отправить</button>
+    </form>
+    <p id="success-message" class="hidden">Спасибо за сообщение! Мы скоро с вами свяжемся 💌</p>
+
+  </main>
+  <footer>
+    <p>My Socials</p>
+<div class="socials">
+
+  <a href="https://instagram.com/" target="_blank"><img src="pictures/instagram.png" alt="Instagram"></a>
+  <a href="https://instagram.com/" target="_blank"><img src="pictures/threads.png" alt="Threads"></a>
+  <a href="https://instagram.com/" target="_blank"><img src="pictures/tik-tok.png" alt="Tik-Tok"></a>
+  <a href="https://instagram.com/" target="_blank"><img src="pictures/whatsapp.png" alt="WhatsApp"></a>
+  <a href="https://instagram.com/" target="_blank"><img src="pictures/etsy.png" alt="Esty"></a>
+</div>
+
+<p>&copy; 2025 DashaKnits. All rights reserved.</p>
+</footer>
+<script>
+  document.querySelector('.contact-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const message = document.getElementById('success-message');
+
+    // Показываем сообщение с анимацией
+    message.classList.remove('hidden');
+    message.classList.add('visible');
+
+    // Очищаем форму
+    this.reset();
+
+    // Прячем сообщение через 5 секунд (по желанию)
+    setTimeout(() => {
+      message.classList.remove('visible');
+      message.classList.add('hidden');
+    }, 5000);
+  });
+</script>
+
 </body>
 </html>

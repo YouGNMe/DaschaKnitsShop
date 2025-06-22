@@ -1,95 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>DashaKnits — Projects</title>
-  <link rel="stylesheet" href="style.css">
-  <!--<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">-->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products | DashaKnits</title>
+  <link rel="stylesheet" href="style.css" />
+  
+  <link rel="icon" href="pictures/letter-d.png" type="image/png">
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Abril+Fatface&display=swap" rel="stylesheet">
+<script defer src="script.js"></script>
 </head>
 <body>
-    <header>
-        <nav>
-        <span class="logo"> DashaKnits</span>
-        <div class="nav-links">
-          <a href="index.html">Home</a>
-          <a href="projects.html">Projects</a>
-          <a href="contact.html"> Contact</a>
-          <a href="about.html">About Me</a>
-        </div>
-        </nav>
-      </header>
+  <header class="site-header">
+  <div class="container">
+    <h2>Products | DaschaKnits</h2>
+    <nav class="nav">
+      <a href="start.html">Home</a>
+      <a href="projects.html">Products</a>
+      <a href="about.html">About me</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
 
-  <main>
-    <!-- тут твои карточки проектов -->
-    <section class="projects">
-      <h1>My Projects</h1>
-      <div class="container">
-        <div class="project-grid" data-aos="fade-up">
-          <div class="project-card">
-            <img src="pictures/scarf.JPEG" alt="Шарф">
-            <div class="content">
-              <div class="text">
-                <h3>Вязаный шарф</h3>
-                <p>Уютный и тёплый, 100% ручная работа.</p>
-              </div>
-              <a href="scarf.html" class="btn">View</a>
-            </div>
-          </div>
-          <div class="project-card" data-aos="fade-up">
-            <img src="pictures/scarf.JPEG" alt="Шарф">
-            <div class="content">
-              <div class="text">
-                <h3>Вязаный шарф</h3>
-                <p>Уютный и тёплый, 100% ручная работа.</p>
-              </div>
-              <a href="scarf.html" class="btn">View</a>
-            </div>
-          </div>
-          <div class="project-card" data-aos="fade-up">
-            <img src="pictures/" alt="Шарф">
-            <div class="content">
-              <div class="text">
-                <h3>Вязаный шарф</h3>
-                <p>Уютный и тёплый, 100% ручная работа.</p>
-              </div>
-              <a href="scarf.html" class="btn">View</a>
-            </div>
-          </div>
-          <div class="project-card" data-aos="fade-up">
-            <img src="scarf.jpg" alt="Шарф">
-            <div class="content">
-              <div class="text">
-                <h3>Вязаный шарф</h3>
-                <p>Уютный и тёплый, 100% ручная работа.</p>
-              </div>
-              <a href="scarf.html" class="btn">View</a>
-            </div>
-          </div>
-          <div class="project-card" data-aos="fade-up">
-            <img src="scarf.jpg" alt="Шарф">
-            <div class="content">
-              <div class="text">
-                <h3>Вязаный шарф</h3>
-                <p>Уютный и тёплый, 100% ручная работа.</p>
-              </div>
-              <a href="scarf.html" class="btn">View</a>
-            </div>
-          </div>
-          
-    <footer>
-      <div class="container"> 
-         <p>© 2025 Eugen Metzler. All right reserved. </p>
-         <div class="socials">
-  <a href="https://www.instagram.com/iamopezdal/?hl=de"> Insta </a>
-  <a href="https://www.linkedin.com/in/eugen-metzler-820780339/">LinkedIn</a>
-         </div>
-      </div> 
-  </footer>
-  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <main class="projects-grid">
+    <h1>Наши изделия</h1>
+    <div class="card" data-product="1">
+      <img src="pictures/dog.png" alt="Product 1">
+      <h3>Шапочка с узором</h3>
+      <p>Тёплая и мягкая</p>
+      <h4>35€</h4>
+    </div>
+    <div class="card" data-product="2">
+      <img src="pictures/happy.png" alt="Product 2">
+      <h3>Зелёный кардиган</h3>
+      <p>Связан вручную</p>
+      <h4>20€</h4>
+    </div>
+    <div class="card" data-product="3">
+      <img src="pictures/raccoon.png" alt="Product 3">
+      <h3>Носочки уютные</h3>
+      <p>Идеальны для вечеров</p>
+      <h4>15€</h4>
+    </div>
+        <div class="card" data-product="4">
+      <img src="pictures/turtle.png" alt="Product 4">
+      <h3>Вязанный свитер</h3>
+      <p>Зимнее чудо</p>
+      <h4>45€</h4>
+    </div>
+  </main>
+
+
+  <!-- Модальное окно -->
+  <div class="modal hidden" id="modal">
+    <div class="modal-content">
+      <span class="close-btn" id="closeModal">x</span>
+      <img src="pictures/item1.jpg" alt="Product Preview" id="modalImg">
+      <h2 id="modalTitle">Название изделия</h2>
+      <p id="modalDesc">Описание, материал, уход и т.д.</p>
+      <button id="orderBtn" class="btn-main">Заказать</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>My Socials</p>
+<div class="socials">
+
+  <a href="https://instagram.com/" target="_blank"><img src="pictures/instagram.png" alt="Instagram"></a>
+  <a href="https://instagram.com/" target="_blank"><img src="pictures/threads.png" alt="Threads"></a>
+  <a href="https://instagram.com/" target="_blank"><img src="pictures/tik-tok.png" alt="Tik-Tok"></a>
+  <a href="https://instagram.com/" target="_blank"><img src="pictures/whatsapp.png" alt="WhatsApp"></a>
+  <a href="https://instagram.com/" target="_blank"><img src="pictures/etsy.png" alt="Esty"></a>
+</div>
+
+<p>&copy; 2025 DashaKnits. All rights reserved.</p>
+</footer>
 <script>
-  AOS.init();
-</script>
+  const params = new URLSearchParams(window.location.search);
+  if (params.get('success') === 'true') {
+    const banner = document.getElementById('thanksBanner');
+    banner.classList.remove('hidden');
 
+    setTimeout(() => {
+      banner.classList.add('hidden');
+    }, 5000);
+  }
+</script>
 </body>
 </html>
+
